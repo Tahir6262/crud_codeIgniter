@@ -8,10 +8,12 @@ class User extends CI_Controller{
 
     function add(){
         if($_SERVER['REQUEST_METHOD']=='POST'){
+            
             $username = $this->input->post('username');
             $email = $this->input->post('email');
             $mobile = $this->input->post('mobile');
             $address = $this->input->post('address');
+
             $data = array(
                 'username'=>$username,
                 'email'=>$email,
